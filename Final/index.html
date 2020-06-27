@@ -6,97 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B10856003</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="flexslider.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function() {
+            $('.flexslider').flexslider();
+        });
+    </script>
 </head>
 
 <body>
-    <input type="checkbox" name="" id="menu">
-
-    <div class="header">
-        <h1 class="logo">
-            <a href="https://b10856003.github.io/Final/index.html"><img height="60" width="60" src="img/首頁.jpg">
-        </h1>
-        <label for="menu" class="btn"> 
-            <span>選單</span>
-        </label>
-        <nav class="nav">
-            <a href="2.html">link</a>
-            <a href="#">123</a>
-        </nav>
-    </div>
-    <dir>
-        <marquee direction="right" height="180px" scrollamount="15" behavior="alternate"><img src="img/YMAtj1-0.jpg"></marquee>
-
-    </dir>
 
 
-
-    <div class="bg">
-        <img src=https://ipetgroup.com/photo/original/244/ace47d67dbe6ee32778e90aca2cf41cc_0.jpeg>
-        <div class="words">棒棒</div>
-    </div>
-
-    <div class="about">
-        <div class="wrap">
-            <div class="title">
-                <h2>哈士奇</h2>
-                <p>12345</p>
-            </div>
-            <div class="item-group">
-                <div class="item">
-                    <div class="pic">
-                        <img src="https://fpscdn.yam.com/MjUzODcwNjl3b3JsZA==/b7d537ad696d6d53.jpg">
-                    </div>
-                    <div class="text">
-                        <h3>title</h3>
-                        <p>母親土地崇拜改進次數真實請求第一工</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTStY7__LBridSndqmO9KzLnHp-Y2NGk__wzEDdyNc0yS8hY_LN&usqp=CAU">
-                    </div>
-                    <div class="text">
-                        <h3>title</h3>
-                        <p>母親土地崇拜改進次數真實請求第一工</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUCqGDFdGKpeu-nhbqyneyuiwNitJb-LnQOXRcFJMV8um0e_c3&usqp=CAU">
-                    </div>
-                    <div class="text">
-                        <h3>title</h3>
-                        <p>母親土地崇拜改進次數真實請求第一工</p>
-                    </div>
-                </div>
-            </div>
+    <nav class="menu">
+        <a id="menubtn" class="toggle-nav" href="#">☰ MENU</a>
+        <div class="menu-logo">
+            <a href="https://b10856003.github.io/Final/index.html"><img height="100" width="90" src="img/首頁.jpg"></a>
         </div>
+        <ul id="menuUl" class="active">
+            <li class="current-active"><a>123</a> </li>
+            <li><a>new</a></li>
+            <li><a>products</a></li>
+            <li><a>about</a></li>
+        </ul>
+
+
+        <script>
+            document.getElementById('menubtn').addEventListener('click', function(e) {
+                $(this).toggleClass('active');
+                $('#menuUl').toggleClass('active');
+            })
+
+            $('#menuUl li').click(function() {
+                $(this).parent().find('li').each(function() {
+                    if ($(this).hasClass('current-active')) {
+                        $(this).toggleClass('current-active');
+                    }
+                })
+                $(this).toggleClass('current-active');
+            })
+        </script>
+    </nav>
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="/B10856003.github.io/Final/img/YMAtj1-0.jpg">
+            </li>
+            <li>
+                <img src="/B10856003.github.io/Final/img/首頁.jpg">
+            </li>
+            <li>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSExIVFRUXFxcXFRUVFRUVFRUXFRcXFxUVFRcYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0NFxAPFSsdFR0rLSstKy0tLSsrLS0tKy0rKysrLSsrKy0rLS0rNysrKy0zKystNC0tKzcxKysrOCsrK//AABEIANYA7AMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAUHBgj/xAA3EAABAwIEBAQFAgYCAwAAAAABAAIRAwQFEiExBkFRYRMicZEHgaGx8DLBFCNCUuHxFdFDcoL/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAeEQEBAQEAAwEAAwAAAAAAAAAAARECEiExQQMEIv/aAAwDAQACEQMRAD8A1UlCUUoIDlBEUIQKlESiCNAAUcokaAShKCJAaBKCAQHKCJBAcoSgiQHKBQRIBKCNCEBShKMhEgEogUaJAJRhEggOUSCCAyUAkpTSgSUIRlBAUI0aEICRoIkBwjhEggCCOElzwFQaJR7i9a0TIVbV4gpATnbHWRp6qKu0FzLeLaGUy9oIPMqwtMfo1D5XtOumo5iURbFGuZxLiOmK4pZh5d9eadpcW25/8jdSRv03VwdCiCpxxBScdHA78+Q/Cp1tetcJlQSkaJplBAYQQQQCEUI0SAQiKNCEBIIQggCU0JKMKgigiQlRRpSQlIAUabqVANyhSqhwkFA4jCQ50KDiOJsp0y8uGUAyZ2QFiWJNpNLiRA31XC47xyzVtN0O3aeRXH8XcTOuahaww39JjmJ3hVdjb5gA4TO2+vppuriLa6x65qaOdoeY+h7qLWw25LS8h0GMxGo12Pcd1pPBfC7HNDi35HpyMLvaODU2tgNERGy0PKuI0HNqQZ1EgpFrWrMcHMc5vz7rVfiVwh4TxXpsPhk+YNH6D1HY/m6jYTwqyo0VHQdhodzB3+UKK4G+qVNahf53ESfz1UGg12+vaV0OJ4fD8s6NJ9xqY+ZCGFYX/EVWUxsT6/nqgYoOrNYC0uM+vJXlrxbcUQxhEjTefl9PutcwThekxgBaDHYKFxPwbRew1Gt84BygbZiriK3A+MadTLTB8xAn1XY2lTM0Feeq9KpbVS/UOa7Ydt/ktA4d+I1JtP8AnEh3TdYsqtKRqvwbFWXDBUbs7UenVS7q5ZTaXPe1o6uIA+qIcCC52hxvYvq+E24YXTG+hMxAOxXQtIOoQGgjRIAiSklAEppRQjaEDaCBRIo0cpMoSgqOKrB9eg5tNxa+PKQefRZNQxrEMMrRULjHmdTqElr27S08jotrquPLfSFQ/EHhf+NpB7YFRoPzHRVDdLja2q2puGPGglzCYe0jdpCxrGuJalWpUYx58JziQ08p3CrsWwmpbPIeY9D91FsqeZ4A3KsirC1pAEOMA8uZ9ld4NTqPqtGwneDHsm7fA31HZWmY58lpHBHBT9H1NAOYnX3C18R3nDdAtptnp0hXMJqm1tNoA0AROuGg6kLFuhN9ZtqsLHCQRGqy3GLSrYZmNaSySWnX+qP8rWGVAdiFExbD216bmOG407IMHwXAKl7UPIDfQnfU9pWtcNcH0rZrTEujU81cYFg1O2phjBHU8yrNNCGUgBCartBBSq92xu5HumaNYPB10SUYh8Q2MFy6IDee+55aLOsQblcYGh2/xC3D4m8PAgVWDMJ1Ak7+n3WTXVHdrmkdBBWlM4JxhdWoim8RyBEp59e+xWq1lR7nZjAEQxoO5j91SXlmWnTX6Lv/AIX4uGuyQAYiTqfz5qDuLf4b2VK3ADJqNb+uTOYDf3XQcOVC63pl2+UfZLv6v8h7iYGXdNcNCLemDr5R/hToW4KCJBRARlBBASMBBKaFQwUECgookRKNJKBms6C09HN+8fumuJsWFCk4wTppDZ9+icuYymVlXxPx7xMtMmC0EGJ177qxHD8VYu+4qklo36BSeEsIfUeIjUxrp9VT2Fq6o8BrSSTyE/ZbN8OuF6wIe6mWj+54g8tgtQdZwrwrTpsa5zQT1+S6tz202+nIJdKnAASy1Zt0Zxx9xnVYw07S3q1quYCBTqOZr/cWj6SFm97iXEFKK1a2qsp84YWgD3JB9V6MbQaNmjrtz6o6tJrhDgCOh1CLrivhxcXVemK1ZhY2BlzTLtIkA8l2xeFT8U40yytnVjGkBrdpcdAAsLvOM693Wy1bgtadqbCQB20OvumaSbXol1ZvUe6j3ji9pDHAO5HkvOpaGCpUFVzYIiSWnrvO+qm8JfEqvQqNZXf4tGYJJl7B1B3I7FXI11xefqz46xTErd5pmi9x0hzGucHDrpzVXgnH99Rq0qd7SfTpvc0BxpvZudNHbjVb7b1G1WNdoQQCDy7EIr3DKNZuSpTa9vRwBUxNV1rXpXLBDg4EKvxDgmg/ZoHyV7b4bSoiKbA0DYAAfZTGFEYZxtwYKDC5o++n3WcYRevoXAIIGvPbdem+KuGad23K5zm+hWI8d/D51nFSm4ubO5BkfsqNHxXEWvw1rWkOdVyMECJLt466Supw+llY1o5NA9gsP4Bx8+PTp3BlrZ8OY0dMStyt3yJWevokIBFKNVBhBEjlAaMIgjCKYKJApJKgOUkuQKacUFfj174VF794aSvO2LXb7iuTzc6OsSVuHG7ot3R06rOuCOF33N0wlvkaQ5x22OgWuRpfwz4Mp0abalQFz9/MBA9NFpLWgbJu2ohjQANAnVLdQEEEFAEEERKDJPj5cPDLdgnKS9x6SMoH0JWFU5NZuXqD7HUr0p8TsPF1bOZpmbDm5v0gg66xGokQsJe7wSR4TGkaOyg+aNt9d1r8dOeSMduS+i5o5OBI32j/AAqG1IgDnKuhWynYazofkCncLwgVngMYGjm46qOnc27rf/hneOfYUM5khkT2BIb66AarsWuXH8JUm06TGMEBrQOYGg9l1NKVNcrDz4TbN0T5S6ampg5lVXEmFsr0nMc0GRz+at2tSa7dFqUrylj+Hut7h7Q0tLXGOWx0hbP8PccNzbgOPnaAD1Om8Kk+KOCDMKo5mPn6pn4ZnKS12/Uae/8A2lRqLClJDEtEGjRSjQGEoJISmoIxSUopJUUh5TTynHJioUHHcaVWuDWGTJ2G5XW8A4UylSBDMrjqZMlcrjVAmq3kJHTXVaPglKKYWp8RZpDnoymHnVZWHXVITZum9VCuq5grg+I+LDZ1WZmF4J2/NlNa8WnMqAonOCo+HuIKNywOYYPNp3CsqlQbyiTn25Pjy4yMLgCCAYnaSOaw+4ZndJkkxPM7dVq3xExikWGnnGu4PNZBdY4KZHhMBOsl0kazsPmnPt2nPotlk4Sem37q8we4NMiMrtef3XK2fEFdhMw4a6O5ZtVe4PibKrgHNynbsToP2VqyNv4Sr56YOWBzEjQ9unVdM1y5LhOsBTawGY0OsxuPkrLGeIKFpSdVqvADQdOZ7BZYq58cTCWH9Fl2AcfPvbghrP5MeV0Q4Ho7l8lpFo8xqmpnpYNKRURhwSKhVYxz3E1k2rTLSAeY9fVZ3wo00bktI0MgtO/q0habfyQfyVnJaG3U8p9jPNa/EaPS2TgTNt+kegT4RBoIkaAwlgpCMFBHKIoyklRSHJion3BMVkHMYoM1zSbEjc9BrzWj2Z8ohZ1irIqsdBJzAAfPmtBw4+UKomqNcJ97lHrGVlYgVdVyfGfDwuKTt8wEtI3EFdqxiTVog6KY6x5lbf3NrVGSo6mWGcoMAEGDm/uXbWHxYe8MpVGCXODS+YAkgZiPmSrf4n8DuqtNxbtl4HnYN3Af1DuOix59tl0IOYHflp+8rWax8rtuN6Was6ZgEaHrA+i46rZ6LRMAY2+s6ta5k1W1Gsa4eUFuQO1A3O+qq/8AgGmQCfmsz0+jxx5cbHGNtwWhWeCUQKzJEiQCOvZW9vw8BIJ2KnWuBMDpJJjXePRK1z/Da5K44quba7uDRqloNR4y7t3I0Sf+Uur+tlzElxgTtqSdR03HoU7xZgtH+MeLcnwyW6auOcgZ2t6+afdal8PuBxQY2pUZDyNju0Hr3S14MstlWfAvCTLek0R5olx6k89eS7ulSIhIoUsoACmMKRLQYAkvSiIRBVlDuW6LNcYpkXJiNxpHuR2Wj3dUAFZRj+JZLneY1E8tTt2Woy0uyPlb6DVSgVyuA8RseAC4cp9V0tGu1/6SCoyeQRI5VByjCQCjBQNOSClOSSsqJyj1jCfKRUCDm8dBDQRvIjtquzwF80m+gXO16QeSDqIPrP7K7wpwAAG0f6C0LknmmyJSw7miCzQgtSITpKSQo3Kbc1Zvxx8NmXBdWtyKdQ6lh0Y48yCP0krSURaisW4apvszUtbnyElm5BGbLoZGmoI9lb+G0aD7qX8SuE61d5r0NXENzN0GrYAOvYfRZncOxClzqN7ECNOQkabI9v8AB/ZnHPjZ6d82gIJjmoNzc0qJ1Izn9LJEn5dNd1wjb/EapytdUMmNGtG/cDRdHwl8PrqtUFWuXMEiS4y90e591K69f3Jn+eXYcEcECm4XFch9WS5rR+lpdu7uVo1GiAmbG2DQB+QpsKR4LdEgCggAtMFyg5yGyaeURzvFlUsbnBiN+nzWJ8SXc1iduh5a9Oy2riCoH0nA7jQ/sVjOM2BE6ba67ATEfZbjJfC+KNDg2oYHVd5TuK4aH25kHbmsgpugruOGMeeyBm00G2yDqHcb1qOlag4xzH1U3DviDbVTBlndw0U+2tKN03ztEkKqxP4c0SD4XlPJIjrbXEKdQSx7XDsQVKa9YNeYVf2TyWh4A/qbsVdYd8SLlrIfRDnD+omCforiNbKSUZSVhQSXBKKSSgjuYB2nRSbTffT80TFVpdtvy7JNm8AwT8+p5lWC+FWdAnWbQoNHqnvE17JSJAARFyQaiSagUakKREpMopUaG4Sq+8w9j9HtB9QrBqJwTFlVNDCqTNWsAPoIU+hR7JwMS2hTC0sIykoSqhQS9E2DzRGoqFFyi137+6cqVOaq8Uug0TPz6d0ZqsxG4ZDpcB1nkuTxW1pOpkNDX/8A0R9t07jFq+qdCY5FpjfqFQjhKpuKjwZ2BP11VRylzaQ47e23vurTCD5tQYVtV4PuN5kbmdT6BQKdjUY+HMIjtomq7nh+9yuGhhaDZvDgs4wekXNBELssHrQIJUlSrO4w9j9wD6qofwTakk+ENfVdC143T7XresqQoIOSXFYUTnKLXelVXclOw6wG7hKSCLZl3MJx9sN42V223HRNXFAQtfBX03nQfncp4u00TIpkGfopFJjtzHp0Uqw3m6pQdJTzqCj1KZGu4Ua09nSwodO6B+x9VI8VRTySXJHiJsvQPByOUxm/6QfURTxfomzUQykoeFCIMVEgvTgphN1aPNEN1qka+6hvthU3Ejon3TIS6dMjZVKZp4RS/tS3YS3kprE+Aqypzh2Xkm6lix4II1O6vC1Rq1DmExqOeZg/hk5dug0hS7WjBVgx5GhCN1LmFCnaLlIY5QfFA7KQysIREIpmoU8VHrnREN29IudK6K2EBU+GOV1SWoU5Kj1nKTKiEyZhKEBLbMpbWhBzdVIpLnIbDZDKjqtMaJUirxW10zt35gc+6RQqmFZqrufK49D9FnHQ4avdBtRRPFCBq6oJNe4gE9kq0l7if6QPqodNhqGNh1/ZXFCiGtDR79fVRbS8vsnnajb0SjEJIetY56SAY1CINHJPZlX3hLZc3WOQ3KVZ7KqtjkjZVGyr8PxmlV2cJ5g7qbkHIBRaksbKcATVOUskrTNKlIema1y1sZjE+qD7lo0Lm+4QFUpykMkeiP8Aimf3t90TrhgE5hHqEXQq0wgykEw69adMzZ9Qg24UoIpisFIITNUIybs6kGArmjV7qgLi39I+ado3hG5V1bF7VqmEVIyqt97p+SnrK8aWkyoYs8o5KO2poUh18ADKYsKss25x1numrnpMpv0TdW4DRuo11cBn52XOYti/81rWn9UyPRS9Lzzq/pX4khVl1XzPKqTiYZUy7F2wVnZUS7UqStX0XTlOmkTyUtlMDklZVpjUWxqQ8D85q8Y5U1SnBkKYytEd/wDZRU+q+BKrhdxUyHSduh3UTiG+cyg57NXNgxzidY7wuZr8Q06zGmm8F7XgbgzAlzR3jMs2rzNdzVvGgbgb79tVVvxhskT/AKKzXi3HLkPa6kc1PUtkHM2QWkOO3N3Poqez4nrtI0BiJmZ7/dN1fHHYcZYS1p/i7d7qdQmXZSGh0DeOugXb4VUPhsznUgTz5Ll6dVldgBPl0dvp1ghWlrfTPOFPLDxdM13RV+JVnBwAcQMsw0xJnXX0TNK8CburprvK4Hse6u7GbCXF7gXgOdEAkgaA8o5z1TVS1eH5IhxMBuZp31HPop2HPpPbTHkzODJHlzFzamsjfYeybq3TB4VTY+JV/TE5Z0bqdBqB2lTwhz1eb6RalpUaCSDAOU6jciY33+yKmCGh2UkGQDpuDqBPZWdxe0zU8PchxiNgXFjg6Z/9vdD/AJBjGPcXEDxqrIb3cPN8hJTwi9d3r6rKrszQRTAaXhufy7z29PurJoBTV/ctqUjkMjxKbQNAPKT5mgbA77JTBpsnPE5mRNSS1Ic1BBbYMvpKLVookFGoYDCEi4c5rSWnXuTCCCjTh8U4muRVjMMkgQCeq63DsZdGQA76mfTZBBP1Z8P3Fd7iSXLm7jDnVLnPnIDAWxJ13MoILP61F5hmAg1BWeQ5w/SOTQumYyAggtyOXV0uEIRILTInNlUeO3r6ADhqJ+eqCCla5C/u81KSNC3UdZBWMMb4L3FuhzvkhxB/UYIjnujQWHT5Fy5zy3w3OzNqAbiSHHUFRsLw0mo1hLY+fJGgstdO9w2zyCJ5K2oMA0QQRExlNSmWqJBbjHQ3Yaw7tb7R9Qg3DKY/pH56oILWMjGG04jKI9EbMOY0yGiUEEw0sWLJzZRPVSRTQQRH/9k="
+                />
+            </li>
+        </ul>
+    </div>
+    <div>
+        <marquee class="dir" direction="right" height="180px" scrollamount="15" behavior="alternate"><img src="img/YMAtj1-0.jpg"></marquee>
     </div>
 
 
 
-
-
-
-    <div class="two">
-        <div class="wrap">
-            <div class="item-group">
-                <div class="item">
-                    <div class="pic">
-                        <img src="https://www.doing-housework.com/store_image/ninepuppy/C1576645434124.jpg">
-                    </div>
-                    <div class="text">
-                        <h3 style="color: lawngreen;">title</h3>
-                        <p>哈囉你好嗎衷心感謝珍重再見期待再相逢</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="footer">
-        &copy; copyright 2020 by css
+        &copy; copyright 2020 by 賢之助
     </div>
 
 
