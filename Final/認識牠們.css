@@ -1,0 +1,143 @@
+* {
+    /*消除網頁邊框*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: rgba(72, 166, 228, 0.35);
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: seashell;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.menu li {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0px 50px 0px 0px;
+    font-size: 25px;
+    font-family: monospace;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(146, 151, 150);
+    transition: color linear 0.15s;
+    cursor: pointer;
+    display: block;
+}
+
+.menu .menu-logo {
+    margin: 0px;
+    margin-left: 0px;
+    padding: 0px 10px 0px 20px;
+}
+
+.menu .menu-logo a {
+    color: #fff;
+}
+
+.menu a:hover,
+.menu .current-active a {
+    text-decoration: none;
+    color: #337275;
+}
+
+.toggle-nav {
+    display: none;
+}
+
+.title h2 {
+    text-align: center;
+    font-size: 46px;
+}
+
+.title {
+    margin: 0 0px 10px;
+    padding: 20px 10px;
+    background-color: #ccc;
+}
+
+.title p {
+    font-size: 22px;
+    text-align: center;
+}
+
+.item {
+    margin: 0 10px 20px;
+}
+
+.item .text h3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.item .pic img {
+    width: 100%;
+}
+
+.two {
+    margin: 60px 0;
+    background-color: #ffa;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        position: relative;
+        display: inline-block;
+    }
+    .toggle-nav {
+        position: absolute;
+        left: 2%;
+        font-size: 40px;
+        font-family: monospace;
+        color: #030303;
+        text-decoration: none;
+        line-height: 100px;
+    }
+    .menu .menu-logo {
+        position: relative;
+        left: 40%;
+    }
+    .menu ul.active {
+        display: none;
+    }
+    .menu ul {
+        left: 0px;
+        padding: 10px 25px;
+        margin-top: -5px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+        border-radius: 0px 0px 3px 3px;
+        background: #ffffffe0;
+    }
+    .menu li {
+        margin: 10px 0px 10px 0px;
+        float: none;
+        display: block;
+    }
+    .menu a {
+        display: block;
+    }
+}

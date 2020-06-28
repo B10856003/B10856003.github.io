@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="認識牠們.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="menu">
+        <a id="menubtn" class="toggle-nav" href="#">☰ MENU</a>
+        <div class="menu-logo">
+            <a href="https://b10856003.github.io/Final/index.html"><img height="100" width="90" src="img/首頁.jpg"></a>
+        </div>
+        <ul id="menuUl" class="active">
+            <li class="current-active"><a>認識牠們</a> </li>
+            <li><a>二哈特區</a></li>
+            <li><a>products</a></li>
+            <li><a>about</a></li>
+        </ul>
+
+
+        <script>
+            document.getElementById('menubtn').addEventListener('click', function(e) {
+                $(this).toggleClass('active');
+                $('#menuUl').toggleClass('active');
+            })
+
+            $('#menuUl li').click(function() {
+                $(this).parent().find('li').each(function() {
+                    if ($(this).hasClass('current-active')) {
+                        $(this).toggleClass('current-active');
+                    }
+                })
+                $(this).toggleClass('current-active');
+            })
+        </script>
+    </nav>
+
+    <div class="two">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/684/600/400">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>哈囉你好嗎衷心感謝珍重再見期待再相逢</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>原始碼下一頁選項大聲研究建築訊明星法律顧客文明昨天心理青年手。</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=2">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>母親土地崇拜改進次數真實請求第一工</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=3">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>母親土地崇拜改進次數真實請求第一工</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=4">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>母親土地崇拜改進次數真實請求第一工</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=4">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>母親土地崇拜改進次數真實請求第一工</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
