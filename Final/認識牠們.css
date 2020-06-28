@@ -11,15 +11,6 @@ body {
     padding: 0;
 }
 
-.text1 {
-    float: right;
-}
-
-.img1 {
-    float: left;
-    width: 100px;
-}
-
 .footer {
     background-color: rgba(0, 0, 0, 0.15);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -99,7 +90,6 @@ body {
 }
 
 .item .pic2 img {
-    width: 40%;
     float: left;
 }
 
