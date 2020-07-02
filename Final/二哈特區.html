@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二哈特區</title>
+    <link rel="stylesheet" href="2ha.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="menu">
+        <a id="menubtn" class="toggle-nav" href="#">☰ MENU</a>
+        <div class="menu-logo">
+            <a href="https://b10856003.github.io/Final/index.html"><img height="100" width="90" src="img/首頁.jpg"></a>
+        </div>
+        <ul id="menuUl" class="active">
+            <li class="current-active"><a href="https://b10856003.github.io/Final/%E8%AA%8D%E8%AD%98%E7%89%A0%E5%80%91.html">認識牠們</a> </li>
+            <li><a>二哈特區</a></li>
+            <li><a href="https://www.instagram.com/maruhusky/?hl=zh-tw">MARUღ</a></li>
+        </ul>
+
+
+        <script>
+            document.getElementById('menubtn').addEventListener('click', function(e) {
+                $(this).toggleClass('active');
+                $('#menuUl').toggleClass('active');
+            })
+
+            $('#menuUl li').click(function() {
+                $(this).parent().find('li').each(function() {
+                    if ($(this).hasClass('current-active')) {
+                        $(this).toggleClass('current-active');
+                    }
+                })
+                $(this).toggleClass('current-active');
+            })
+        </script>
+    </nav>
+
+    <div class="two">
+        <iframe width="1200" height="800" src="https://www.youtube.com/embed/9w1hhQQgHOA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>
