@@ -93,25 +93,31 @@ body {
     float: left;
 }
 
-.item .text h3 {
-    font-size: 24px;
-    text-align: center;
-}
-
 .item .text2 h3 {
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
     float: none;
-}
-
-.item .text2 h3 p {
-    font-size: 18px;
-    text-align: left;
 }
 
 .two {
     margin: 60px 0;
     background-color: rgba(72, 166, 228, 0.397);
+}
+
+.english {
+    color: blue;
+    font-style: italic;
+}
+
+.s {
+    text-align: left;
+    color: #030303;
+    font-family: 微軟正黑體;
+    font-size: 24px;
+}
+
+.c {
+    color: rgba(224, 98, 13, 0.863);
 }
 
 @media screen and (min-width: 768px) {
